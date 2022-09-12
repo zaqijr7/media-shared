@@ -1,0 +1,14 @@
+.logoContainer {
+  width: 200px;
+}
+
+.logoContainer > div {
+  height: unset !important;
+}
+
+.logo {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
