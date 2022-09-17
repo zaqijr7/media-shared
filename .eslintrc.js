@@ -25,5 +25,10 @@ module.exports = {
     'jsx-a11y/click-events-have-key-events': 0,
     'jsx-a11y/no-static-element-interactions': 0,
     'react/no-unescaped-entities': 0,
+    'no-console': 0,
+    'no-param-reassign': 0,
+    'import/prefer-default-export': 0,
+    'no-return-assign': 0,
+    'default-param-last': 0,
   },
 };

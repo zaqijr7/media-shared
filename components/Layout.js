@@ -1,10 +1,14 @@
 import React from 'react';
+import Navbar from './Navbar';
 
 function Layout({ children }) {
   return (
-    <div className="container mx-auto px-3">
-      {children}
-    </div>
+    <>
+      <Navbar />
+      <div className="container mx-auto px-3">
+        {children}
+      </div>
+    </>
   );
 }
 

@@ -29,26 +29,26 @@ export default function Home() {
           </div>
         </div>
         <div className="text-center text-3xl font-normal text-zinc-700">Get started in 3 simple steps</div>
-        <div className="text-center font-normal text-zinc-500 mt-3 mb-5">There are three advantages of our service that can make it easier for you.</div>
-        <div className="flex justify-around my-10">
-          <div className="flex flex-col items-center">
+        <div className="text-center font-normal text-zinc-600 mt-3 mb-5">There are three advantages of our service that can make it easier for you.</div>
+        <div className="grid grid-cols-1 md:flex justify-around mt-10 mb-40">
+          <div className="flex flex-col items-center my-5 md:my-0 border-2 md:border-0 p-5 md:p-0 border-dashed rounded-lg">
             <div className="h-28 w-28 rounded-full bg-sky-200 flex justify-center items-center">
               <IonIcon name="cloud-upload" className="text-5xl text-sky-700 font-extrabold mr-1" />
             </div>
-            <span className="text-xl font-semibold mt-4 text-zinc-700">Upload Photos or Videos</span>
+            <p className="text-center text-xl font-semibold mt-4 text-zinc-600">Upload Photos or Videos</p>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center my-5 md:my-0 border-2 md:border-0 p-5 md:p-0 border-dashed rounded-lg">
             <div className="h-28 w-28 rounded-full bg-sky-200 flex justify-center items-center">
               <IonIcon name="link" className="text-5xl text-sky-700 font-extrabold mr-1" />
             </div>
-            <span className="text-xl font-semibold mt-4 text-zinc-700">Get Direct Link</span>
+            <p className="text-center text-xl font-semibold mt-4 text-zinc-600">Get Direct Link</p>
 
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center my-5 md:my-0 border-2 md:border-0 p-5 md:p-0 border-dashed rounded-lg">
             <div className="h-28 w-28 rounded-full bg-sky-200 flex justify-center items-center">
               <IonIcon name="share-social" className="text-5xl text-sky-700 font-extrabold mr-1" />
             </div>
-            <span className="text-xl font-semibold mt-4 text-zinc-700">Share Anywhere</span>
+            <p className="text-center text-xl font-semibold mt-4 text-zinc-600">Share Anywhere</p>
           </div>
         </div>
       </Layout>

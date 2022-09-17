@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import IonIcon from '@reacticons/ionicons';
+import Link from 'next/link';
 import styles from '../styles/Navbar.module.css';
 
 function Navbar() {
@@ -17,9 +18,11 @@ function Navbar() {
       <div className="py-2 border-b-2 border-gray-100 w-full">
         {/* display md to up */}
         <div className="md:flex hidden container px-3 mx-auto items-center justify-between">
-          <div className={`${styles.logoContainer} flex items-center mr-5`}>
-            <Image src="/icon.svg" width={300} height={70} objectFit="contain" />
-          </div>
+          <Link href="/">
+            <div className={`${styles.logoContainer} flex items-center mr-5`}>
+              <Image src="/icon.svg" width={300} height={70} objectFit="contain" />
+            </div>
+          </Link>
           <div className="flex items-center">
             <div className="text-gray-700 p-2 rounded-xl hover:text-sky-600 hover:bg-sky-100 cursor-pointer flex items-center mr-5">
               <IonIcon name="home-outline" className="text-lg font-extrabold mr-1" />
@@ -35,10 +38,12 @@ function Navbar() {
               <IonIcon name="log-in-outline" className="text-2xl font-extrabold mr-1" />
               Login
             </div>
-            <div className="p-2 rounded-xl bg-[#3F70D1] hover:bg-[#3F70D1]/80 text-white cursor-pointer flex items-center">
-              <IonIcon name="add-circle-outline" className="text-xl font-extrabold mr-1" />
-              Create Account
-            </div>
+            <Link href="/register">
+              <div className="p-2 rounded-xl bg-[#3F70D1] hover:bg-[#3F70D1]/80 text-white cursor-pointer flex items-center">
+                <IonIcon name="add-circle-outline" className="text-xl font-extrabold mr-1" />
+                Create Account
+              </div>
+            </Link>
           </div>
         </div>
         {/* display md to up */}

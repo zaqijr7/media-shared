@@ -2,7 +2,10 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import * as gtag from '../lib/gtag';
 import '../styles/globals.css';
-import Navbar from '../components/Navbar';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import { persistStore } from 'redux-persist';
+import store from '../redux/store';
 
 function App({ Component, pageProps }) {
   const router = useRouter();
@@ -17,12 +20,13 @@ function App({ Component, pageProps }) {
       router.events.off('hashChangeComplete', handleRouteChange);
     };
   }, [router.events]);
-
+  const persistor = persistStore(store);
   return (
-    <>
-      <Navbar />
-      <Component {...pageProps} />
-    </>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <Component {...pageProps} />
+      </PersistGate>
+    </Provider>
   );
 }
 
